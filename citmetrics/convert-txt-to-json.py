@@ -34,6 +34,8 @@ def main():
         try:
             with open(newfilename, 'w') as fd:
                 json.dump(json.loads(newcontents, fd, indent=2))
+                print("Converted succesfully: %s" % newfilename)
+                os.remove(filename)
         except:
             os.remove(newfilename)
             print("Failed to convert file: %s" % filename)
