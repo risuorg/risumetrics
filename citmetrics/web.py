@@ -4,6 +4,7 @@
 
 import datetime
 import json
+import os
 import random
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 
@@ -43,6 +44,7 @@ class S(BaseHTTPRequestHandler):
             with open(filename, 'w') as fd:
                 json.dump(json.loads(post_data.decode('utf-8')), fd, indent=2)
         except:
+            os.remove(filename)
             with open("%s.txt" % filename, 'w') as fd:
                 fd.write(post_data.decode('utf-8'))
 
