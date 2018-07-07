@@ -38,15 +38,24 @@ class S(BaseHTTPRequestHandler):
         """
         content_length = int(self.headers['Content-Length'])  # <--- data size
         post_data = self.rfile.read(content_length)  # <--- Gets the data itself
+        contents = post_data.decode('utf-8')
         filename = "%s-%s.json" % (datetime.datetime.now().strftime("%Y%m%d-%H%M%S"), random.random())
         print("Incoming file: %s" % filename)
+
         try:
             with open(filename, 'w') as fd:
-                json.dump(json.loads(post_data.decode('utf-8')), fd, indent=2)
+                json.dump(json.loads(contents), fd, indent=2)
         except:
-            os.remove(filename)
-            with open("%s.txt" % filename, 'w') as fd:
-                fd.write(post_data.decode('utf-8'))
+            try:
+                with open(filename, 'w') as fd:
+                    newdata = json.loads("\n".join(contents.split("\n")[3:-2]))
+                    json.dump(newdata, fd, indent=2)
+
+            except:
+                # Corner case if we're getting something else we don't know about
+                os.remove(filename)
+                with open("%s.txt" % filename, 'w') as fd:
+                    fd.write(contents)
 
         self._set_headers()
         self.wfile.write("<html><body><h1>POST!</h1></body></html>")
