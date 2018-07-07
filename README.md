@@ -11,4 +11,14 @@
 
 Citmetrics  is a set of simple scripts to receive incoming `--call-home <serveruri>`  over http and store as json files on disk.
 
-Those files will be later analized for metrics information like most 'hit' issue on executions to detect plugins that always return the same status and hence are not useful or erroneous or even to detect old plugins that are no longer relevant in current systems.
+Those files will be later analyzed for metrics information like most 'hit' issue on executions to detect plugins that always return the same status and hence are not useful or erroneous or even to detect old plugins that are no longer relevant in current systems.
+
+### Execution
+
+In an environment with tox run:
+
+~~~sh
+tox -e start
+~~~
+
+It will start webserver with default port of `80` so ensure having proper  privileges for doing so.
