@@ -24,7 +24,7 @@ def main():
     for filename in files:
         print("Processing file: %s" % filename)
         try:
-            contents = json.load(open(filename, 'r'))
+            json.load(open(filename, 'r'))
         except:
             print("Processing failed, removing file")
             os.remove(filename)
