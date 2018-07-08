@@ -8,7 +8,7 @@ import os
 
 def main():
     files = []
-    folders = [os.path.dirname(__file__)]  # Walk the folders and subfolders for files based on our criteria
+    folders = [os.getcwd()]  # Walk the folders and subfolders for files based on our criteria
     for folder in folders:
         for items in os.walk(folder, followlinks=True):
             root = items[0]
