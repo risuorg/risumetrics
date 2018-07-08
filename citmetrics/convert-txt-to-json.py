@@ -16,7 +16,7 @@ def main():
 
             for filename in filenames:
                 filepath = os.path.join(root, filename)
-                if os.path.splitext(filepath)[1] == '.txt':
+                if os.path.splitext(filepath)[1] == '.txt' and '.json' in filename:
                     files.append(filepath)
 
     for filename in files:
