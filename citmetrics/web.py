@@ -50,12 +50,14 @@ class S(BaseHTTPRequestHandler):
                 with open(filename, 'w') as fd:
                     newdata = json.loads("\n".join(contents.split("\n")[3:-2]))
                     json.dump(newdata, fd, indent=2)
+                    print("Old format of json detected and converted")
 
             except:
                 # Corner case if we're getting something else we don't know about
                 os.remove(filename)
                 with open("%s.txt" % filename, 'w') as fd:
                     fd.write(contents)
+                    print("Invalid format received")
 
         self._set_headers()
         self.wfile.write("<html><body><h1>POST!</h1></body></html>")
