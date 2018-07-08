@@ -27,7 +27,7 @@ def main():
             contents = json.load(open(filename, 'r'))
         except:
             print("Processing failed, removing file")
-            # os.remove(filename)
+            os.remove(filename)
 
 
 if __name__ == "__main__":
