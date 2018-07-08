@@ -39,7 +39,7 @@ class S(BaseHTTPRequestHandler):
         content_length = int(self.headers['Content-Length'])  # <--- data size
         post_data = self.rfile.read(content_length)  # <--- Gets the data itself
         contents = post_data.decode('utf-8')
-        filename = "%s-%s.json" % (datetime.datetime.now().strftime("%Y%m%d-%H%M%S"), random.random())
+        filename = "citellus-%s-%s.json" % (datetime.datetime.now().strftime("%Y%m%d-%H%M%S"), random.random())
         print("Incoming file: %s" % filename)
 
         try:
