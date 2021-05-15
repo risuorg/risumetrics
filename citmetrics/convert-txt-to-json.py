@@ -16,7 +16,7 @@ def main():
 
             for filename in filenames:
                 filepath = os.path.join(root, filename)
-                if os.path.splitext(filepath)[1] == '.txt' and '.json' in filename and 'citellus' in filename:
+                if os.path.splitext(filepath)[1] == '.txt' and '.json' in filename and 'risu' in filename:
                     files.append(filepath)
 
     for filename in files:

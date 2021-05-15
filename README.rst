@@ -1,7 +1,7 @@
-.. image:: https://img.shields.io/github/license/citellusorg/citmetrics.svg :alt: LICENSE
-.. image:: https://travis-ci.org/citellusorg/citmetrics.svg?branch=master :alt:  Build Status
-.. image:: https://coveralls.io/repos/github/citellusorg/citmetrics/badge.svg?branch=master :alt:  Coverage Status
-.. image:: https://img.shields.io/github/release/citellusorg/citmetrics.svg :alt:  Releases
+.. image:: https://img.shields.io/github/license/risuorg/citmetrics.svg :alt: LICENSE
+.. image:: https://travis-ci.org/risuorg/citmetrics.svg?branch=master :alt:  Build Status
+.. image:: https://coveralls.io/repos/github/risuorg/citmetrics/badge.svg?branch=master :alt:  Coverage Status
+.. image:: https://img.shields.io/github/release/risuorg/citmetrics.svg :alt:  Releases
 
 
 Introduction

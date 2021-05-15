@@ -2,7 +2,7 @@
 # encoding: utf-8
 # Copyright (C)  2018 Pablo Iranzo Gómez <Pablo.Iranzo@gmail.com>
 #
-# Description: validate jsons as valid for citellus or remove in case of corruption
+# Description: validate jsons as valid for risu or remove in case of corruption
 
 import json
 import os
@@ -18,7 +18,7 @@ def main():
 
             for filename in filenames:
                 filepath = os.path.join(root, filename)
-                if os.path.splitext(filepath)[1] == '.json' and 'citellus' in filename:
+                if os.path.splitext(filepath)[1] == '.json' and 'risu' in filename:
                     files.append(filepath)
 
     for filename in files:

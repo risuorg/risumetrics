@@ -1,7 +1,7 @@
 # How to file a bug report
 
 If you have any suggestions for improvements please do not hesitate to
-open an [issue](https://github.com/citellusorg/citmetrics/issues/new).
+open an [issue](https://github.com/risuorg/risumetrics/issues/new).
 
 # How to contribute code
 
@@ -11,9 +11,9 @@ like this:
 
 [gerrithub]: https://gerrithub.io/
 
-1. Clone the citmetrics repository:
+1. Clone the risumetrics repository:
 
-        git clone https://github.com/citellusorg/citmetrics
+        git clone https://github.com/risuorg/risumetrics
 
 2. Configure the `git-review` tool:
 
@@ -64,7 +64,7 @@ to request changes; when this happens:
 
         git-review
 
-You can see pending and already merged actual changes at: <https://review.gerrithub.io/q/citellusorg>
+You can see pending and already merged actual changes at: <https://review.gerrithub.io/q/risuorg>
 
 4. Once the new plugin has been submitted you'll see some comments from 'Jenkins' which is running Unit tests against it (same ones that you run with `tox`)
 
