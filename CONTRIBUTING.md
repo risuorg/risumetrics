@@ -5,37 +5,37 @@ open an [issue](https://github.com/risuorg/risumetrics/issues/new).
 
 # How to contribute code
 
-We encourage you to contribute new plugins.  We use [gerrithub][] for
-reviewing proposed changes.  The submission process looking something
+We encourage you to contribute new plugins. We use [gerrithub][] for
+reviewing proposed changes. The submission process looking something
 like this:
 
 [gerrithub]: https://gerrithub.io/
 
-1. Clone the risumetrics repository:
+1.  Clone the risumetrics repository:
 
         git clone https://github.com/risuorg/risumetrics
 
-2. Configure the `git-review` tool:
+2.  Configure the `git-review` tool:
 
         git-review -s
 
-3. Check out a branch in which to make your changes:
+3.  Check out a branch in which to make your changes:
 
         git checkout -b "your-new-branch"
 
-4. Edit your files and validate with tox:
+4.  Edit your files and validate with tox:
 
         tox # this will check the changes for some errors
 
     1. NOTE: tox will run python 2.7, pep8 and python 3.5 tests, if your environment lacks for example python 3.5, do execute tox -l to see the available tests and skip that one, for example:
 
-        ~~~sh
-        tox -e pep8
-        tox -e py27
-        # We're skipping tox -e py35 which is also invoked by default when tox is executed without arguments.
-        ~~~
+       ```sh
+       tox -e pep8
+       tox -e py27
+       # We're skipping tox -e py35 which is also invoked by default when tox is executed without arguments.
+       ```
 
-5. Update your local repository:
+5.  Update your local repository:
 
         git add $modified_files
         git commit
@@ -44,23 +44,23 @@ like this:
 
         If the commit fixes a github open issue, also use `Closes #$ISSUEID` so github automatically closes it once merged referencing the commit.
 
-6. Submit your changes for review:
+6.  Submit your changes for review:
 
         git-review
 
-Then wait for your changes to be reviewed.  It is common for reviewers
+Then wait for your changes to be reviewed. It is common for reviewers
 to request changes; when this happens:
 
-1. Edit your files and revalidate with tox:
+1.  Edit your files and revalidate with tox:
 
         tox # this will check the new changes for some errors
 
-2. Update your existing commit. Do not create a new commit!
+2.  Update your existing commit. Do not create a new commit!
 
         git add $modified_files
         git commit --amend
 
-3. Resubmit the change:
+3.  Resubmit the change:
 
         git-review
 
